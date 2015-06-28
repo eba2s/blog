@@ -1,2 +1,24 @@
 
 
+{% extends "blog/index.html" %}
+{% block content %}
+
+    {% for post in posts %}
+        <div class="mainContent">
+            <div class="content">
+                <main class="typicalArticle">
+                    <header>
+                        <h3><a href="{{ post.title }}">{{ post.title }}</a></h3>
+                    </header>
+                    <footer>
+                        <p class='postInfo'>Posted on {{ post.timestamp }}</p>
+                    </footer>
+                    <article>
+                        <p>    {{ post.continut|safe|linebreaks }} </p>
+                    </article>
+                </main>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+

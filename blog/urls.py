@@ -4,5 +4,6 @@ from . import views
 from blog.models import posts
 
 urlpatterns = patterns('',
+                       url(r'^$', 'blog.views.home', name='home'),
                        url(r'^blog/$', 'blog.views.blog', name='blog'),
                        )
