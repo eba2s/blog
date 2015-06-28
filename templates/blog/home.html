@@ -1,18 +1,18 @@
 {% extends "blog/index.html" %}
 {% block content %}
 
-    {% for post in posts %}
+    {% for post in AboutMe %}
         <div class="mainContent">
             <div class="content">
                 <main class="typicalArticle">
                     <header>
-                        <h3><a href="{{ post.title }}"></a></h3>
+                        <h3><a href="{{ post.titleMe }}"></a></h3>
                     </header>
                     <footer>
-                        <p class='postInfo'>Posted on {{ post.timestamp }}</p>
+                        <p class='postInfo'>Posted on {{ post.dateMe }}</p>
                     </footer>
                     <article>
-                        <p>    {{ post.continut|safe|linebreaks }} </p>
+                        <p>    {{ post.contentMe|safe|linebreaks }} </p>
                     </article>
                 </main>
             </div>
