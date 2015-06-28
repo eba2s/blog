@@ -8,3 +8,9 @@ class posts(models.Model):
     continut = models.TextField()
     timestamp = models.DateTimeField(auto_now= False)
 
+
+class AboutMe(models.Model):
+    titleMe = models.CharField(max_length=20)
+    contentMe = models.TextField()
+    dateMe = models.DateField(auto_created=True)
+
