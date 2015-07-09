@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="MySQL - blog@localhost" uuid="4e07b561-5bc5-4d35-b15b-858b2fff3821">
-      <secret-storage>master_key</secret-storage>
+    <data-source name="Django default" uuid="c23e16ad-fddb-465a-9f41-a7b48b154fe8">
       <user-name>root</user-name>
-      <schema-pattern>blog.*</schema-pattern>
-      <default-schemas>blog.*</default-schemas>
+      <user-password>dfd0dfcbdfc7dfc5dfc6dfd2dfcfdfd9</user-password>
     </data-source>
   </component>
 </project>
