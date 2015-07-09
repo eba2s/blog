@@ -22,18 +22,20 @@
     </nav>
 </header>
 
-{% block content %}
-    <article>
-    <h3><a href="/blog/{{ post.id }}">{{ post.title }}</a></h3>
-    <p class="postInfo">
-        on {{ post.date }}
-    </p>
 
-    <div class="typicalArticle">
-        {{ post.body|safe|linebreaks }}
-    </div>
+<div>
+    <article>
+        <h4>{{ object.titleMe }}</h4>
+
+        <p class="postInfo">
+            on {{ object.dateMe }}
+        </p>
+
+        <div class="typicalArticle">
+            {{ object.contentMe|safe|linebreaks }}
+        </div>
     </article>
-{% endblock %}
+    </div>
 
 
 <footer class="mainFooter">

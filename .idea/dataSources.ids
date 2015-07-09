@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="Django default" uuid="c23e16ad-fddb-465a-9f41-a7b48b154fe8">
+  <data-source name="MySQL - blog@localhost" uuid="4e07b561-5bc5-4d35-b15b-858b2fff3821">
     <database-info product="MySQL" version="5.6.25-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
@@ -11,8 +11,8 @@
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="name" sqlType="VARCHAR" precision="80" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="auth_group_permissions_group_id_1c0e5b56_fk_auth_group_id" table="auth_group_permissions" schema="" catalog="blog" columns="group_id"/>
-      <exported-key name="auth_user_groups_group_id_150c5ab1_fk_auth_group_id" table="auth_user_groups" schema="" catalog="blog" columns="group_id"/>
+      <exported-key name="auth_group_permissions_group_id_4a3b4a0e_fk_auth_group_id" table="auth_group_permissions" schema="" catalog="blog" columns="group_id"/>
+      <exported-key name="auth_user_groups_group_id_27b820c_fk_auth_group_id" table="auth_user_groups" schema="" catalog="blog" columns="group_id"/>
       <index name="name" unique="true" columns="name"/>
     </table>
     <table name="auth_group_permissions" schema="" catalog="blog" type="TABLE">
@@ -20,10 +20,10 @@
       <column name="group_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="permission_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="auth_group_permissio_permission_id_3bfddd1_fk_auth_permission_id" columns="permission_id" ref-table="auth_permission" ref-schema="" ref-catalog="blog" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="auth_group_permissions_group_id_1c0e5b56_fk_auth_group_id" columns="group_id" ref-table="auth_group" ref-schema="" ref-catalog="blog" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="auth_group_permissi_permission_id_5cd0e31f_fk_auth_permission_id" columns="permission_id" ref-table="auth_permission" ref-schema="" ref-catalog="blog" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="auth_group_permissions_group_id_4a3b4a0e_fk_auth_group_id" columns="group_id" ref-table="auth_group" ref-schema="" ref-catalog="blog" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <index name="group_id" unique="true" columns="permission_id"/>
-      <index name="auth_group_permissio_permission_id_3bfddd1_fk_auth_permission_id" unique="false" columns="permission_id"/>
+      <index name="auth_group_permissi_permission_id_5cd0e31f_fk_auth_permission_id" unique="false" columns="permission_id"/>
     </table>
     <table name="auth_permission" schema="" catalog="blog" type="TABLE">
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
@@ -31,9 +31,9 @@
       <column name="content_type_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="codename" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="auth_permissi_content_type_id_2f7a075c_fk_django_content_type_id" columns="content_type_id" ref-table="django_content_type" ref-schema="" ref-catalog="blog" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <exported-key name="auth_group_permissio_permission_id_3bfddd1_fk_auth_permission_id" table="auth_group_permissions" schema="" catalog="blog" columns="permission_id"/>
-      <exported-key name="auth_user_user_perm_permission_id_2e1f4e4c_fk_auth_permission_id" table="auth_user_user_permissions" schema="" catalog="blog" columns="permission_id"/>
+      <foreign-key name="auth_permissi_content_type_id_23e7c514_fk_django_content_type_id" columns="content_type_id" ref-table="django_content_type" ref-schema="" ref-catalog="blog" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <exported-key name="auth_group_permissi_permission_id_5cd0e31f_fk_auth_permission_id" table="auth_group_permissions" schema="" catalog="blog" columns="permission_id"/>
+      <exported-key name="auth_user_user_perm_permission_id_10aa7fce_fk_auth_permission_id" table="auth_user_user_permissions" schema="" catalog="blog" columns="permission_id"/>
       <index name="content_type_id" unique="true" columns="codename"/>
     </table>
     <table name="auth_user" schema="" catalog="blog" type="TABLE">
@@ -49,9 +49,9 @@
       <column name="is_active" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6"/>
       <column name="date_joined" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="auth_user_groups_user_id_7ade0b64_fk_auth_user_id" table="auth_user_groups" schema="" catalog="blog" columns="user_id"/>
-      <exported-key name="auth_user_user_permissions_user_id_491f3bec_fk_auth_user_id" table="auth_user_user_permissions" schema="" catalog="blog" columns="user_id"/>
-      <exported-key name="django_admin_log_user_id_5c5b79af_fk_auth_user_id" table="django_admin_log" schema="" catalog="blog" columns="user_id"/>
+      <exported-key name="auth_user_groups_user_id_6688a44_fk_auth_user_id" table="auth_user_groups" schema="" catalog="blog" columns="user_id"/>
+      <exported-key name="auth_user_user_permissions_user_id_453e6e85_fk_auth_user_id" table="auth_user_user_permissions" schema="" catalog="blog" columns="user_id"/>
+      <exported-key name="django_admin_log_user_id_3e9b2aab_fk_auth_user_id" table="django_admin_log" schema="" catalog="blog" columns="user_id"/>
       <index name="username" unique="true" columns="username"/>
     </table>
     <table name="auth_user_groups" schema="" catalog="blog" type="TABLE">
@@ -59,24 +59,24 @@
       <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="group_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="auth_user_groups_group_id_150c5ab1_fk_auth_group_id" columns="group_id" ref-table="auth_group" ref-schema="" ref-catalog="blog" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="auth_user_groups_user_id_7ade0b64_fk_auth_user_id" columns="user_id" ref-table="auth_user" ref-schema="" ref-catalog="blog" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="auth_user_groups_group_id_27b820c_fk_auth_group_id" columns="group_id" ref-table="auth_group" ref-schema="" ref-catalog="blog" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="auth_user_groups_user_id_6688a44_fk_auth_user_id" columns="user_id" ref-table="auth_user" ref-schema="" ref-catalog="blog" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <index name="user_id" unique="true" columns="group_id"/>
-      <index name="auth_user_groups_group_id_150c5ab1_fk_auth_group_id" unique="false" columns="group_id"/>
+      <index name="auth_user_groups_group_id_27b820c_fk_auth_group_id" unique="false" columns="group_id"/>
     </table>
     <table name="auth_user_user_permissions" schema="" catalog="blog" type="TABLE">
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="permission_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="auth_user_user_perm_permission_id_2e1f4e4c_fk_auth_permission_id" columns="permission_id" ref-table="auth_permission" ref-schema="" ref-catalog="blog" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="auth_user_user_permissions_user_id_491f3bec_fk_auth_user_id" columns="user_id" ref-table="auth_user" ref-schema="" ref-catalog="blog" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="auth_user_user_perm_permission_id_10aa7fce_fk_auth_permission_id" columns="permission_id" ref-table="auth_permission" ref-schema="" ref-catalog="blog" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="auth_user_user_permissions_user_id_453e6e85_fk_auth_user_id" columns="user_id" ref-table="auth_user" ref-schema="" ref-catalog="blog" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
       <index name="user_id" unique="true" columns="permission_id"/>
-      <index name="auth_user_user_perm_permission_id_2e1f4e4c_fk_auth_permission_id" unique="false" columns="permission_id"/>
+      <index name="auth_user_user_perm_permission_id_10aa7fce_fk_auth_permission_id" unique="false" columns="permission_id"/>
     </table>
     <table name="blog_aboutme" schema="" catalog="blog" type="TABLE">
       <column name="dateMe" sqlType="DATE" precision="10" scale="0" nullable="false" jdbcType="91"/>
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <column name="titleMe" sqlType="VARCHAR" precision="20" scale="0" nullable="false" jdbcType="12"/>
       <column name="contentMe" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="false" jdbcType="-1"/>
       <primary-key name="PRIMARY" columns="id"/>
@@ -99,19 +99,19 @@
       <column name="content_type_id" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
       <column name="user_id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="django_admin__content_type_id_21f206a7_fk_django_content_type_id" columns="content_type_id" ref-table="django_content_type" ref-schema="" ref-catalog="blog" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <foreign-key name="django_admin_log_user_id_5c5b79af_fk_auth_user_id" columns="user_id" ref-table="auth_user" ref-schema="" ref-catalog="blog" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="django_admin__content_type_id_21f206a7_fk_django_content_type_id" unique="false" columns="content_type_id"/>
-      <index name="django_admin_log_user_id_5c5b79af_fk_auth_user_id" unique="false" columns="user_id"/>
+      <foreign-key name="django_admin__content_type_id_134680c0_fk_django_content_type_id" columns="content_type_id" ref-table="django_content_type" ref-schema="" ref-catalog="blog" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="django_admin_log_user_id_3e9b2aab_fk_auth_user_id" columns="user_id" ref-table="auth_user" ref-schema="" ref-catalog="blog" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="django_admin__content_type_id_134680c0_fk_django_content_type_id" unique="false" columns="content_type_id"/>
+      <index name="django_admin_log_user_id_3e9b2aab_fk_auth_user_id" unique="false" columns="user_id"/>
     </table>
     <table name="django_content_type" schema="" catalog="blog" type="TABLE">
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
       <column name="app_label" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
       <column name="model" sqlType="VARCHAR" precision="100" scale="0" nullable="false" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="auth_permissi_content_type_id_2f7a075c_fk_django_content_type_id" table="auth_permission" schema="" catalog="blog" columns="content_type_id"/>
-      <exported-key name="django_admin__content_type_id_21f206a7_fk_django_content_type_id" table="django_admin_log" schema="" catalog="blog" columns="content_type_id"/>
-      <index name="django_content_type_app_label_6b6ac015_uniq" unique="true" columns="app_label,model"/>
+      <exported-key name="auth_permissi_content_type_id_23e7c514_fk_django_content_type_id" table="auth_permission" schema="" catalog="blog" columns="content_type_id"/>
+      <exported-key name="django_admin__content_type_id_134680c0_fk_django_content_type_id" table="django_admin_log" schema="" catalog="blog" columns="content_type_id"/>
+      <index name="django_content_type_app_label_557f8143_uniq" unique="true" columns="app_label,model"/>
     </table>
     <table name="django_migrations" schema="" catalog="blog" type="TABLE">
       <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
