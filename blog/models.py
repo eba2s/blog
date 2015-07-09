@@ -10,6 +10,7 @@ class posts(models.Model):
 
 
 class AboutMe(models.Model):
+    id = models.IntegerField(primary_key=True)
     titleMe = models.CharField(max_length=20)
     contentMe = models.TextField()
     dateMe = models.DateField(auto_created=True)

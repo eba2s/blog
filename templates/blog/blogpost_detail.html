@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>EBA</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="/static/css/styles.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<body class="body">
+<header class="mainHead">
+    <img src="/static/img/mainlogo.png" %} width="700" height="144" %}>
+    <nav>
+        <ul>
+            <li><a href='/'>Home</a></li>
+            <li><a href='/blog'>Blog</a></li>
+            <li><a href='{{ STATIC_URL }}/latestnews/'>News</a></li>
+            <li><a href='{{ STATIC_URL }}/archive/'>Archive</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<main class="typicalArticle">
+    <article>
+        <h4><br><b>{{ object.title }}<br></b></h4>
+        by {{ object.author }}
+        <p class="postInfo">
+            on {{ object.timestamp }}
+        </p>
+
+        <div class="typicalArticle">
+            {{ object.continut|safe|linebreaks }}
+        </div>
+    </article>
+</main>
+
+
+</div>
+
+
+<footer class="mainFooter">
+    <p> copyright &copy; 2015</p>
+</footer>
+
+</body>
+</html>

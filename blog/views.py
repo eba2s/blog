@@ -1,10 +1,9 @@
 from django.shortcuts import render_to_response
 from blog.models import posts
 from blog.models import AboutMe
+from django.http import HttpResponse, Http404
 from django.views.generic import DetailView
-
-from django.http import HttpResponse
-import datetime
+from django.core.urlresolvers import reverse
 
 
 def home(request):
@@ -22,15 +21,24 @@ def latestnews(request):
     entries = posts.objects.all()[:3]
     return render_to_response('blog/latestnews.html', {'posts': entries})
 
+
 def archive(request):
     entries = posts.objects.all()
     return render_to_response('blog/latestnews.html', {'posts': entries})
 
 
 class One_Per_Page(DetailView):
-    queryset = posts.objects.all()
+    model = AboutMe
 
 
-    def oneperpage(self):
-        entries = super(One_Per_Page, self).get_queryset()
-        return render_to_response('blog/posts_detail.html', {'posts': entries})
+class Blog_Per_Page(DetailView):
+    model = posts
+
+
+    # def get_absolute_url(self):
+    # return reverse('entry_detail', kwargs={'pk': self.pk})
+
+    # def oneperpage(request):
+    #     entry = One_Per_Page.objects.get_queryset(pk=AboutMe.id)
+    #     entry = super(One_Per_Page).get_queryset()
+    #     return render_to_response('blog/aboutme_detail.html', {'AboutMe': entry})

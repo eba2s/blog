@@ -5,7 +5,9 @@
             <div class="content">
                 <main class='typicalArticle'>
                     <header>
-                        <h3><a href="{{ post.title }}"><em>{{ post.title }}</em>,
+                        <h3><a href="{{ post.id }}"><em>{{ post.title }}</em>,
+                            by
+                            <small>{{ post.author }}</small>
                             <small>posted on {{ post.timestamp }}</small>
                         </a></h3>
                     </header>
